@@ -81,8 +81,76 @@ void ex1_7(){
     
     printf("c vaut : %c, a vaut :%c\n",c,a);
     
-    
+}
 
+
+void ex2_2(){
+    //Ecrire un programme C qui lit une suite d'entiers strictement positifs et qui s'arrête si on saisit la valeur -1.
+    
+    int a=0;
+    
+    
+    while (a!= -1){
+        printf("Entrer une valeur de a\n");
+        scanf("%d",&a);
+    }
+}
+
+
+void ex2_3(){
+    //Ecrire un programme C qui demande "Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?", qui saisit un caractère, si le caractère est compris entre '1' et '9' alors on fera afficher la table correspondante puis on réitérera le processus, sinon on affichera "ce n'est pas dans les possibilités du programme, recommencez !" et on réitérera le   processus.
+    
+    char a;
+    printf("Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?");
+    scanf("%c",&a);
+    
+    //Better solution but try with switch
+    //if(a>='1' && a<='9')
+    while (a!='0'){
+        switch (a) {
+        case '1':
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+                printf("Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?");
+                scanf("%c",&a);
+
+            break;
+        case '2':
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '3':
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '4':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '5':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '6':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '7':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '8':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        case '9':
+                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            break;
+        default:
+            printf("ce n'est pas dans les possibilités du programme, recommencez !");
+            break;
+    }
+}
+
+}
+
+void ex2_4(){
+  
+    // Ecrire un programme C en utilisant l'instruction Switch qui lit un caractère (fonction getchar()), qui affiche "un" si le caractère '1' a été saisi, "deux" si c'est le caractère '2', "trois" si c'est '3' et "autre caractère" sinon
+
+    
 }
 
 
@@ -91,6 +159,9 @@ int main(){
     //ex1_5();
     //ex1_6();
     //ex1_7();
+    //ex2_2();
+    ex2_3();
+    
     
     
     
