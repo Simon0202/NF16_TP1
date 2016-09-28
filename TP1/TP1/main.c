@@ -149,7 +149,112 @@ void ex2_3(){
 void ex2_4(){
   
     // Ecrire un programme C en utilisant l'instruction Switch qui lit un caractère (fonction getchar()), qui affiche "un" si le caractère '1' a été saisi, "deux" si c'est le caractère '2', "trois" si c'est '3' et "autre caractère" sinon
+}
 
+void ex3_1(){
+    
+    
+}
+
+
+void ex3_2(){
+    
+    
+}
+
+void ex3_3(){
+    
+    
+}
+
+
+void ex3_4(){
+    
+    
+}
+
+
+void ex4_1(int a, int b){
+    //Ecrire une fonction qui permute les valeurs de ses deux paramètres. Tester cette fonction par un appel depuis votre programme principal.
+    a = a+b;
+    b= a-b;
+    a = a-b;
+    
+    printf("a= %d et b= %d\n",a,b);
+}
+
+ //This the version with pointeur. Without we duplicate the data.
+void ex4_2(int *a,int *b){
+    //Pourquoi dans la question 4.1 utilise-t-on des pointeurs ? Aurait-on pu utiliser des entiers ? Justifier.
+   //The function receive the adress where the datas are.
+    //We initialize a pointer with the adress where the value 2 is.
+    int *tmp = a;
+    //We change the adress a by b
+    a = b;
+    //We change the adress b by tmp and so on a
+    b = tmp;
+    //We print the value
+    printf("a= %d et b= %d\n",*a,*b);
+    
+    
+}
+
+void ex4_3(){
+    //Ecrire un programme qui déclare deux variables i et j; la première (i) sera une variable de type entier, la seconde (j) sera une variable de type pointeur sur entier. C'est-à-dire que j contiendra une valeur qui sera l'adresse (emplacement mémoire) d'un entier. Affecter à l'entier i la valeur 5, affecter à l'adresse j l'adresse de l'entier i, afficher l'entier i et le contenu de ce qui est pointé par la variable j.
+    int i = 5;
+    int *j;
+    j = &i;
+    printf("contenu de i= %d et contenu de ce qui est pointé par j= %d",i,*j);
+    
+    
+}
+
+void ex4_4(){
+    //Modifier le programme précédent en ajoutant à la fin les instructions suivantes : incrémenter la donnée pointée par la variable j, afficher i, multiplier i par 5, afficher la donnée pointée par j, incrémenter l'adresse j et afficher de nouveau la donnée pointée par j.
+    int i = 5;
+    int *j;
+    j = &i;
+    printf("contenu de i= %d et contenu de ce qui est pointé par j= %d\n",i,*j);
+    *j = *j+1;
+    printf("i vaut maintenant= %d\n",i);
+    i = i*5;
+    printf("la donnee pointee par j vaut %d \n",*j);
+    j++;
+    printf("la donne j vaut %d \n",*j);
+    
+    
+}
+
+void ex4_5(){
+    //You'll have to do it
+    
+}
+
+void ex4_6(){
+    //You'll have to do it
+    
+}
+
+void ex4_7(){
+    //Ecrire un programme qui lit une liste de Nb nombres, la décale d'un cran vers le haut (le premier doit se retrouver en dernier), l'affiche puis la décale vers le bas. Les nombres doivent être stockés dans un tableau avec une notation en pointeurs.
+    unsigned int Nb = 0;
+    unsigned int i = 0;
+  
+    
+    printf("Veuillez entrer un nombre Nb de nombes à saisir\n");
+    scanf("%d",&Nb);
+    
+    int tab[Nb];
+    int val=0;
+    while (i<Nb){
+        printf("Veuillez entrer le %d chiffre\n",i+1);
+        scanf("%d",&val);
+        tab[i]=val;
+        i++;
+    }
+    printf("Décalage vers le haut");
+    t
+    printf("Décalage vers le bas");
     
 }
 
@@ -160,7 +265,18 @@ int main(){
     //ex1_6();
     //ex1_7();
     //ex2_2();
-    ex2_3();
+    //ex2_3();
+    //ex4_1(2, 3);
+    
+    //int a = 2;
+    //int b = 3;
+    //ex4_2(&a,&b);
+    
+    //ex4_3();
+    //ex4_4();
+    ex4_7();
+    
+    
     
     
     
