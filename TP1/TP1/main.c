@@ -99,7 +99,7 @@ void ex2_2(){
 
 
 void ex2_3(){
-    //Ecrire un programme C qui demande "Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?", qui saisit un caractère, si le caractère est compris entre '1' et '9' alors on fera afficher la table correspondante puis on réitérera le processus, sinon on affichera "ce n'est pas dans les possibilités du programme, recommencez !" et on réitérera le   processus.
+    //Ecrire un programme C qui demande "Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?", qui saisit un caractère, si le caractère est compris entre '1' et '9' alors on fera afficher la table correspondante puis on réitérera le processus, sinon on affichera "ce n'est pas dans les possibilités du programme, recommencez !" et on réitérera le processus.
     
     char a;
     printf("Quelle table de multiplication voulez-vous, tapez 0 (zéro) pour sortir ?");
@@ -122,22 +122,22 @@ void ex2_3(){
             printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '4':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '5':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '6':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '7':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '8':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         case '9':
-                        printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
+            printf("a=%d %d %d %d %d %d %d %d %d",a*1,a*2,a*3,a*4,a*5,a*6,a*7,a*8,a*9);
             break;
         default:
             printf("ce n'est pas dans les possibilités du programme, recommencez !");
@@ -148,37 +148,68 @@ void ex2_3(){
 }
 
 void ex2_4(){
-  
     // Ecrire un programme C en utilisant l'instruction Switch qui lit un caractère (fonction getchar()), qui affiche "un" si le caractère '1' a été saisi, "deux" si c'est le caractère '2', "trois" si c'est '3' et "autre caractère" sinon
+    char a;
+    printf("Entrer un caractère\n");
+    a = getchar();
+    switch(a){
+    case '1':
+            printf("un\n");
+            break;
+    case '2':
+            printf("deux\n");
+            break;
+    case '3':
+            printf("trois\n");
+            break;
+    default:
+            printf("autre caractère\n");
+    }
 }
 
 void ex3_1(){
-    
-    
+    //Déclarer un tableau de 10 entiers, une variable de contrôle de boucle de type entier; puis réaliser l'initialisation du tableau avec la valeur 0 à l'aide d'une boucle.
+    int tab[10];
+    int i;
+    for(i=0;i<10;i++)
+        tab[i]=0;
 }
 
 
 void ex3_2(){
-    
-    
+    //Déclarer un tableau de 5 entiers en l'initialisant à la déclaration avec les valeurs décroissantes allant de 4 à 0.
+    int tab[5]={4,3,2,1,0};
 }
 
 void ex3_3(){
-    
-    
+    //Déclarer un tableau de dimension 2, de trois lignes et 4 colonnes. Initialiser les cases du tableau avec des valeurs allant de 12 à 23, la première ligne contiendra les valeurs 12, 13, 14, 15; la deuxième 16, 17, 18, 19; la troisième 20, 21, 22, 23; afficher les cases du tableau en utilisant la notation indicée.
+    int tab[3][4]={12,13,14,15,16,17,18,19,20,21,22,23};
+    int i,j;
+    for(i=0;i<3;i++)
+        for(j=0;j<4;j++)
+            printf("%d\n",tab[i][j]);
 }
 
-
 void ex3_4(){
+    //Faire le calcul de multiplication d'une matrice (M lignes, L colonnes) par une matrice (L, N) : résultat (M,N).
     
+    //? j'ai pas bien compris pour les matrices est fixe par l'utilisateur ou pas
     
+    int res[2][4],i,j,k;
+    memset(res,0,sizeof(res));
+    int mat1[2][3]={1,2,3,4,5,6};
+    int mat2[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+    for(i=0;i<2;i++)
+        for(j=0;j<4;j++)
+            for(k=0;k<3;k++)
+                res[i][j]+=mat1[i][k]*mat2[k][j];
 }
 
 
 void ex4_1(int a, int b){
     //Ecrire une fonction qui permute les valeurs de ses deux paramètres. Tester cette fonction par un appel depuis votre programme principal.
     a = a+b;
-    b= a-b;
+    b = a-b;
     a = a-b;
     
     printf("a= %d et b= %d\n",a,b);
@@ -227,13 +258,21 @@ void ex4_4(){
 }
 
 void ex4_5(){
-    //You'll have to do it
-    
+    //Reprendre l'exercice 3.3 avec la notation en pointeur pour la ligne.
+    int tab[3][4]={12,13,14,15,16,17,18,19,20,21,22,23};
+    int i,j;
+    for(i=0;i<3;i++)
+        for(j=0;j<4;j++)
+            printf("%d\n",(*tab+4*i)[j]);
 }
 
 void ex4_6(){
-    //You'll have to do it
-    
+    //Reprendre l'exercice 3.3 avec une notation en pointeur uniquement.
+    int tab[3][4]={12,13,14,15,16,17,18,19,20,21,22,23};
+    int i,j;
+    for(i=0;i<3;i++)
+        for(j=0;j<4;j++)
+            printf("%d\n",*(*tab+i*4+j));
 }
 
 void ex4_7(){
@@ -254,8 +293,7 @@ void ex4_7(){
         i++;
     }
     printf("Décalage vers le haut");
-    
-    printf("Décalage vers le bas");
+
     
 }
 
@@ -289,6 +327,11 @@ int main(){
     //ex1_7();
     //ex2_2();
     //ex2_3();
+    //ex2_4();
+    //ex3_1();
+    //ex3_2();
+    //ex3_3();
+    //ex3_4();
     //ex4_1(2, 3);
     
     //int a = 2;
@@ -297,8 +340,11 @@ int main(){
     
     //ex4_3();
     //ex4_4();
+
+    //ex4_5();
+    //ex4_6();
     //ex4_7();
-    
+        
     ex5_1();
     
     
