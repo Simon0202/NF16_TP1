@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 
 void ex1_1(){
     //Ecrire un programme C qui lit deux réels, les affiche, calcule leur somme et affiche le résultat.
@@ -253,8 +254,30 @@ void ex4_7(){
         i++;
     }
     printf("Décalage vers le haut");
-    t
+    
     printf("Décalage vers le bas");
+    
+}
+
+void ex5_1(){
+    //Ecrire un programme C qui détermine le nombre et la position d'une sous-chaîne dans une chaîne.
+    int i;
+    char chaine[] = "";
+    char sous_chaine[] = "";
+    
+    
+    printf("Veuillez saisir une chaine\n");
+    scanf("%s",chaine);
+    printf("la chaine est :%s\n",chaine);
+    
+    printf("Veuillez saisir une sous chaine\n");
+    scanf("%s",sous_chaine);
+    
+    for (i=0; i<strlen(chaine);i++){
+        
+    }
+    
+    
     
 }
 
@@ -274,9 +297,9 @@ int main(){
     
     //ex4_3();
     //ex4_4();
-    ex4_7();
+    //ex4_7();
     
-    
+    ex5_1();
     
     
     
